@@ -10,7 +10,8 @@ from sentence_transformers import SentenceTransformer
 class FeatureExtractionPipeline(BasePipeline):
     def __init__(
             self,
-            original_df: DataFrame[YoutubeVideoSchema],text_embedding_model_name:str="paraphrase-multilingual-MiniLM-L12-v2"
+            original_df: DataFrame[YoutubeVideoSchema],
+            text_embedding_model_name:str="paraphrase-multilingual-MiniLM-L12-v2"
         ):
         self.original_df = original_df
         self.text_embedding_model_name = text_embedding_model_name
